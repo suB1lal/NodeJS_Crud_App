@@ -1,0 +1,84 @@
+<%- include('layout/header') %>
+
+<div class="container">
+  <div class="row">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 mx-auto mt-4">
+          <div class="card shadow">
+            <div class="card-header bg-primary">
+              <h5 class="text-light display-4 text-center">Add New User</h5>
+            </div>
+
+            <div class="card-body p-4">
+              <form
+                action="/add"
+                method="post"
+                id="add-form"
+                enctype="multipart/form-data"
+              >
+                <div class="mb-3">
+                  <label for="name">Name</label>
+
+                  <input
+                    type="text"
+                    name="name"
+                    class="form-control form-control-lg"
+                    placeholder="Enter Name"
+                    required
+                  />
+                </div>
+
+                <div class="mb-3">
+                  <label for="email">Email</label>
+
+                  <input
+                    type="email"
+                    name="email"
+                    class="form-control form-control-lg"
+                    placeholder="Enter Email"
+                    required
+                  />
+                </div>
+
+                <div class="mb-3">
+                  <label for="phone">Phone</label>
+
+                  <input
+                    type="tel"
+                    name="phone"
+                    class="form-control form-control-lg"
+                    placeholder="Enter Phone"
+                    required
+                  />
+                </div>
+
+                <div class="mb-3">
+                  <label for="image" class="form-label">Select Image</label>
+
+                  <input
+                    type="file"
+                    name="image"
+                    class="form-control form-control-lg"
+                    required
+                  />
+                </div>
+
+                <div class="mb-3">
+                  <input
+                    type="submit"
+                    name="submit"
+                    value="Add User"
+                    class="btn btn-outline-primary btn-lg"
+                  />
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <%- include('layout/footer') %>
+</div>
